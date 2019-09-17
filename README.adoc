@@ -15,7 +15,7 @@ Like all Spring Boot applications, it runs on port `8080` by default, but you ca
 	server.port: 8888
 	spring.cloud.config.server.git.uri: file://${user.home}/config-repo
 	
-where `${user.home}/config-repo` is a git repository containing YAML and properties files.
+where `${user.home}/config-repo` is a git repository containing YAML and properties files (https://github.com/wanderleisouza/config-repo for me).
 
 The following listing shows a recipe for creating the git repository in the preceding example:
 
@@ -28,3 +28,6 @@ The following listing shows a recipe for creating the git repository in the prec
 	git remote add origin git@github.com:wanderleisouza/config-repo.git
 	git push -u origin master
 	
+just start ther *config-server* as any spring-boot application
+
+	mvn spring-boot:run
